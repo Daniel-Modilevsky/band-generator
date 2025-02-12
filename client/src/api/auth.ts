@@ -5,7 +5,7 @@ export const submitKeys = async (
   huggingFaceKey: string
 ) => {
   try {
-    const res = await fetch(`${API_BASE_URL}/api/set-keys`, {
+    const res = await fetch(`/api/set-keys`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

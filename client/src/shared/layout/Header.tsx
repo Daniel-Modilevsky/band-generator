@@ -6,7 +6,6 @@ import { Button, IconButton } from "@mui/material";
 import { useState } from "react";
 import { TextField } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import { API_BASE_URL } from "../../config";
 import { submitKeys } from "../../api/auth";
 
 const FormContainer = styled.div`

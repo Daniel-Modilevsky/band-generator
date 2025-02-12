@@ -16,6 +16,6 @@ app.use("/", bandRouter);
 app.use("/", historyRouter);
 app.use("/", authRouter);
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(4050, "0.0.0.0", () => {
+  console.log("Server running on port 4050");
 });
