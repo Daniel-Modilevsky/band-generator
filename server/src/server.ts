@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import bandRouter from "./routes/band.ts";
 import historyRouter from "./routes/history.ts";
-import { Redis } from "ioredis";
 import dotenv from "dotenv";
 import authRouter from "./routes/auth.ts";
 
@@ -10,7 +9,6 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4050;
-const redis = new Redis();
 
 app.use(express.json());
 app.use(cors());
