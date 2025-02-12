@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./server
+    container_name: llm_bands-backend
+    ports:
+      - "4050:4050"
+    env_file:
+      - ./server/.env
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+
+  frontend:
+    build:
+      context: ./client
+      args:
+        - REACT_APP_API_URL=http://backend:4050
+    container_name: llm_bands-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  redis:
+    image: "redis:latest"
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+    restart: always

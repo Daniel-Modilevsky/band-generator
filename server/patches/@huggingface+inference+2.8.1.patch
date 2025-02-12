@@ -1,0 +1,15 @@
+diff --git a/node_modules/@huggingface/inference/dist/src/index.d.ts b/node_modules/@huggingface/inference/dist/src/index.d.ts
+index 9a0a684..8cd97c8 100644
+--- a/node_modules/@huggingface/inference/dist/src/index.d.ts
++++ b/node_modules/@huggingface/inference/dist/src/index.d.ts
+@@ -1,5 +1,5 @@
+-export { HfInference, HfInferenceEndpoint } from "./HfInference";
+-export { InferenceOutputError } from "./lib/InferenceOutputError";
+-export * from "./types";
+-export * from "./tasks";
++export { HfInference, HfInferenceEndpoint } from "./HfInference.js";
++export { InferenceOutputError } from "./lib/InferenceOutputError.js";
++export * from "./types/index.js";
++export * from "./tasks/index.js";
+ //# sourceMappingURL=index.d.ts.map
+\ No newline at end of file
